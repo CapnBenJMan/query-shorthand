@@ -3,7 +3,7 @@ export { Elem } from "./Elem"
 export { Attribute, PseudoClass, PseudoElement } from "./ElemComponents"
 
 
-export type { parser, queryElem, queryParser, elemName } from "./exportTypes"
+export type { parser, queryElem, queryParser, elemName, htmlTags, svgTags } from "./exportTypes"
 import type { queryElem } from "./exportTypes"
 
 export const ID = <E extends HTMLElement | SVGElement = HTMLElement>(n: string) => document.getElementById(n) as E
