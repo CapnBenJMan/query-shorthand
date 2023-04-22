@@ -25,22 +25,22 @@ export type parser<
 	T1 extends string[] = split<S, ">" | "+" | "~">,
 	T2 extends string[] = trimmer<T1>,
 	T2_1 extends string[][] = mapper1<T2>,
-	// @ts-ignore
+	// @ts-expect-error
 	T2_2 extends string[] = flat<T2_1>,
-	// @ts-ignore
+	// @ts-expect-error
 	T3 extends string = last<T2_2>,
 > = T3
 
 
 export type queryParser<
 	S extends string,
-	// @ts-ignore
+	// @ts-expect-error
 	P extends string = parser<S>
 > = elemName<P>
 
 export type queryElem<
 	S extends string,
-	// @ts-ignore
+	// @ts-expect-error
 	P = queryParser<parser<S>>
 > =
 	P extends keyof htmlTags
