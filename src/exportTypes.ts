@@ -45,4 +45,4 @@ export type QueryElem<
 	? SVGTags[P] :
 	Element
 
-export type { ElemName as elemName, HTMLTags as htmlTags, SVGTags as svgTags } from "./types"
+export type { ElemName, HTMLTags, SVGTags } from "./types"
