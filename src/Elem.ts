@@ -1,7 +1,7 @@
-import type { elemName } from "./types"
+import type { ElemName } from "./types"
 import { Attribute, PseudoClass, PseudoElement } from "./ElemComponents"
 
-export class Elem<T extends string = string, S = elemName<T>> {
+export class Elem<T extends string = string, S = ElemName<T>> {
 	name: S = "elem" as S
 	id: string | undefined
 	classList = [] as string[]

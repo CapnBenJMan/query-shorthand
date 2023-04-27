@@ -3,11 +3,11 @@ export { Elem } from "./Elem"
 export { Attribute, PseudoClass, PseudoElement } from "./ElemComponents"
 
 
-export type { parser, queryElem, queryParser, elemName, htmlTags, svgTags } from "./exportTypes"
-import type { queryElem } from "./exportTypes"
+export type { Parser, QueryElem, queryParser, elemName, htmlTags, svgTags } from "./exportTypes"
+import type { QueryElem } from "./exportTypes"
 
 export const ID = <E extends HTMLElement | SVGElement = HTMLElement>(n: string) => document.getElementById(n) as E
 
-export const qry = <K extends string>(n: K, el: Element | Document = document) => el.querySelector(n) as queryElem<K>
+export const qry = <K extends string>(n: K, el: Element | Document = document) => el.querySelector(n) as QueryElem<K>
 
-export const qryA = <K extends string>(n: K, el: Element | Document = document) => el.querySelectorAll(n) as NodeListOf<queryElem<K>>
+export const qryA = <K extends string>(n: K, el: Element | Document = document) => el.querySelectorAll(n) as NodeListOf<QueryElem<K>>

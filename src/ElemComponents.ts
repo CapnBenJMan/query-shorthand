@@ -1,10 +1,10 @@
-import type { Presence, attrSensitive, pVals } from "./types"
+import type { Presence, AttrSensitive, PresenceVals } from "./types"
 
 export class Attribute {
 	name: string
 	type: keyof Presence = "present"
 	value: string = ""
-	sensitivity: attrSensitive = "none"
+	sensitivity: AttrSensitive = "none"
 
 	constructor(str: `[${string}${"" | `=${string}`}]`) {
 		const nStr = str.slice(1, -1)
@@ -20,15 +20,15 @@ export class Attribute {
 			}
 
 			if (["i", "I", "s", "S"].some(x => after.endsWith(` ${x} `)))
-				this.sensitivity = after.match(/ [is]$/i)![0] as attrSensitive
+				this.sensitivity = after.match(/ [is]$/i)![0] as AttrSensitive
 
 			this.value = after.replace(/ [is]$/gi, "")
 		} else {
 			this.name = nStr
 		}
 
-		function _a(t: string): t is Exclude<pVals, "" | "="> extends `${infer T}=` ? T : never {
-			return Object.values(Attribute.presence).includes(t + "=" as pVals)
+		function _a(t: string): t is Exclude<PresenceVals, "" | "="> extends `${infer T}=` ? T : never {
+			return Object.values(Attribute.presence).includes(t + "=" as PresenceVals)
 		}
 	}
 

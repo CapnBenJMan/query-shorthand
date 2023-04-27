@@ -1,12 +1,12 @@
 import { Attribute } from "./ElemComponents"
 
-export type stage = "start" | "child" | "gen" | "adj" | "desc"
-export type pseudo = `:${string}`
+export type Stage = "start" | "child" | "gen" | "adj" | "desc"
+export type Pseudo = `:${string}`
 
 
 
-export type htmlTags = HTMLElementTagNameMap
-export type svgTags = SVGElementTagNameMap
+export type HTMLTags = HTMLElementTagNameMap
+export type SVGTags = SVGElementTagNameMap
 
 type elemId = `#${string}`
 type elemClass = `.${string}`
@@ -14,8 +14,8 @@ type elemAttr = `[${string}]`
 type elemPSC = `:${string}${`(${string})` | ""}`
 type elemPSE = `::${string}${`(${string})` | ""}`
 type elemAfter = Exclude<`${elemId | ""}${elemClass | ""}${elemAttr | ""}${elemPSC | ""}${elemPSE | ""}`, "">
-export type elemName<X extends string> =
-	X extends keyof htmlTags | keyof svgTags ?
+export type ElemName<X extends string> =
+	X extends keyof HTMLTags | keyof SVGTags ?
 	X :
 	X extends `${infer A extends string}${elemAfter}` ?
 	A extends `${string}${elemAfter}` ?
@@ -27,6 +27,6 @@ export type elemName<X extends string> =
 
 export type Presence = typeof Attribute.presence
 
-export type pVals = Presence[keyof Presence]
+export type PresenceVals = Presence[keyof Presence]
 
-export type attrSensitive = ` ${"i" | "I" | "s" | "S"} ` | "none"
+export type AttrSensitive = ` ${"i" | "I" | "s" | "S"} ` | "none"

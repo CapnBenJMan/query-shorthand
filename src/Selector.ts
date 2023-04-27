@@ -1,5 +1,5 @@
 import { Elem } from "./Elem"
-import type { stage, pseudo } from "./types"
+import type { Stage, Pseudo } from "./types"
 
 function _A<X>(o: X): asserts o is NonNullable<X> { }
 
@@ -9,7 +9,7 @@ export class Selector<S extends string> {
 
 	constructor(str: S) {
 		let elem: Elem
-		let next: stage = "start"
+		let next: Stage = "start"
 		let nStr = str as string
 		while (nStr != "") {
 
@@ -70,10 +70,10 @@ export class Selector<S extends string> {
 	}
 
 
-	private static pseudos = new Map<`$${number}$`, pseudo>()
+	private static pseudos = new Map<`$${number}$`, Pseudo>()
 	private static pseudoCount = 0
 	private static replacer = (val: string) => {
-		this.pseudos.set(`$${this.pseudoCount}$`, val as pseudo)
+		this.pseudos.set(`$${this.pseudoCount}$`, val as Pseudo)
 		return `$${this.pseudoCount++}$`
 	}
 

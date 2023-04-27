@@ -1,6 +1,6 @@
 {
   "name": "query-shorthand",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A series of shorthand commands for retrieving DOM elements with type checking",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,6 +29,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "literal-utility-types": "^1.0.2"
+    "literal-utility-types": "^1.0.3"
   }
 }
