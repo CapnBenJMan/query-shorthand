@@ -30,3 +30,6 @@ export type Presence = typeof Attribute.presence
 export type PresenceVals = Presence[keyof Presence]
 
 export type AttrSensitive = ` ${"i" | "I" | "s" | "S"} ` | "none"
+
+export interface Queryable { querySelector(selector: string): Node }
+export interface QueryAllable { querySelectorAll<K extends Node>(selector: string): NodeListOf<K> }
