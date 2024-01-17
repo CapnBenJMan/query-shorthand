@@ -5,8 +5,10 @@
 		"declaration": true,
 		"outDir": "./lib",
 		"strict": true,
-		"downlevelIteration": true
+		"downlevelIteration": true,
+		"esModuleInterop": true,
+		"moduleResolution": "Node"
 	},
 	"include": ["src"],
-	"exclude": ["node_modules", "src/test.ts"]
+	"exclude": ["**/node_modules", "src/test.ts"]
 }
