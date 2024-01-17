@@ -1,35 +1,34 @@
 {
-  "name": "query-shorthand",
-  "version": "1.0.9",
-  "description": "A series of shorthand commands for retrieving DOM elements with type checking",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib/**/*"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "prepack": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CapnBenJMan/query-shorthand.git"
-  },
-  "keywords": [
-    "DOM",
-    "query"
-  ],
-  "author": "CapnBenJMan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CapnBenJMan/query-shorthand/issues"
-  },
-  "homepage": "https://github.com/CapnBenJMan/query-shorthand#readme",
-  "devDependencies": {
-    "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "literal-utility-types": "^1.0.3"
-  }
+	"name": "query-shorthand",
+	"version": "2.1.0",
+	"description": "A series of shorthand commands for retrieving DOM elements with type checking",
+	"main": "lib/index.js",
+	"type": "module",
+	"types": "lib/index.d.ts",
+	"files": [
+		"lib/**/*"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc",
+		"prepack": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CapnBenJMan/query-shorthand.git"
+	},
+	"keywords": [
+		"DOM",
+		"query"
+	],
+	"author": "CapnBenJMan",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/CapnBenJMan/query-shorthand/issues"
+	},
+	"homepage": "https://github.com/CapnBenJMan/query-shorthand#readme",
+	"devDependencies": {
+		"literal-utility-types": "^2.0.0",
+		"typescript": "^5.0.4"
+	}
 }
